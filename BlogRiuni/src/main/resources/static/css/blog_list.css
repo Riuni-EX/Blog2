@@ -1,0 +1,27 @@
+    ul.blogs {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: nowrap; /* 防止换行，使元素横向排列 */
+    }
+
+    ul.blogs li {
+        flex: 0 0 auto; /* 自动宽度，不伸缩，不收缩 */
+        margin-right: 10px; /* 间距调整 */
+    }
+
+    ul.blogs li a {
+        text-decoration: none;
+        padding: 10px;
+        border: 1px solid #ccc;
+        display: block;
+        text-align: center; /* 居中文本 */
+    }
+
+    ul.blogs li img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+    }

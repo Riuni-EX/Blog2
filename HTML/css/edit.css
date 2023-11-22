@@ -1,0 +1,39 @@
+.background{
+  
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 设置高度为屏幕高度 */
+    background-image: url(/picture.jpg);
+    background-size: cover; /* 使背景图片覆盖整个屏幕 */
+    background-position: center; /* 将背景图片居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    display: flex; /* 使用Flex布局 */
+    position: absolute; /* 使用绝对定位 */
+    top: 0; /* 将图片顶部与父元素顶部对齐 */
+    width: 97.7%;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5); /* 使用 rgba 设置颜色，最后一个参数是透明度（0 到 1 之间） */
+            padding: 20px;
+}
+
+.logo-h1{
+        font-size: 30px;
+        color: #4c8ccc;
+}
+.logo-img{
+    width: 100px; /* 设置图片宽度为100像素，可以根据需要进行调整 */
+    height: auto; /* 保持宽高比，自动计算高度 */
+}
+footer {
+    background-color: rgba(255, 255, 255, 0.5); /* 使用 rgba 设置颜色，最后一个参数是透明度（0 到 1 之间） */
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* 固定位置 */
+    bottom: 0; /* 底部对齐 */
+    width: 100%;
+}

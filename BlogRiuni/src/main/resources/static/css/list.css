@@ -1,0 +1,108 @@
+.background{
+  
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 设置高度为屏幕高度 */
+    background-image: url(/picture.jpg);
+    background-size: cover; /* 使背景图片覆盖整个屏幕 */
+    background-position: center; /* 将背景图片居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    display: flex; /* 使用Flex布局 */
+    position: absolute; /* 使用绝对定位 */
+    top: 0; /* 将图片顶部与父元素顶部对齐 */
+    width: 97.7%;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5); /* 使用 rgba 设置颜色，最后一个参数是透明度（0 到 1 之间） */
+            padding: 20px;
+}
+
+.logo-h1{
+        font-size: 30px;
+        color: #4c8ccc;
+}
+.logo-img{
+    width: 100px; /* 设置图片宽度为100像素，可以根据需要进行调整 */
+    height: auto; /* 保持宽高比，自动计算高度 */
+}
+footer {
+    background-color: rgba(255, 255, 255, 0.5); /* 使用 rgba 设置颜色，最后一个参数是透明度（0 到 1 之间） */
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* 固定位置 */
+    bottom: 0; /* 底部对齐 */
+    width: 100%;
+}
+
+.btn-radius {
+    text-decoration: none; /* 去除链接的下划线 */
+    color: #1b70a8; /* 链接文字颜色 */
+    font-size: 50px; /* 链接文字加粗 */
+}
+
+/* ヘッダーに「ブログを書く」ボタンのスタイル */
+.all-view-register__button {
+    text-align: left;
+    margin-bottom: 10px; /* 必要に応じてマージンを調整 */
+}
+
+.btn-radius {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #3498db; /* ボタンの背景色 */
+    color: #fff; /* ボタンのテキスト色 */
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* より滑らかなホバーエフェクトのためのトランジションを追加 */
+}
+
+.btn-radius:hover {
+    background-color: #2980b9; /* ホバー時のボタンの背景色 */
+}
+
+/* フッターに「ログアウト」ボタンのスタイル */
+footer a.btn-radius {
+    float: right;
+    margin-top: 10px; /* 必要に応じてマージンを調整 */
+}
+
+/* ブログリストのスタイル */
+.blogs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* アイテム間のスペースを調整 */
+}
+
+.blogs li {
+    border: 1px solid #ddd; /* 各ブログアイテムのボーダーカラー */
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 200px; /* 必要に応じて幅を調整 */
+}
+
+.blogs li img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* 必要に応じて最大高さを調整 */
+}
+
+.blogs li p {
+    margin: 5px 0;
+}
+
+/* レスポンシブスタイル */
+@media (max-width: 768px) {
+    .blogs {
+        flex-direction: column; /* 小さな画面では垂直レイアウトに変更 */
+    }
+
+    .blogs li {
+        width: 100%; /* 小さな画面では各ブログアイテムをフル幅に */
+    }
+}

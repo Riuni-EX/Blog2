@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SAIL</title>
+        <link rel="stylesheet" href="css/edit.css">
+    </head>
+    <body class="background">
+        <header class="logo">
+            <img src="ship.jpg" alt="" class="logo-img">
+            <h1 class="logo-h1">-wellcome to SAIL-</h1>
+        </header>
+        <main>
+            <div class="main-inner">
+                <section class="register-section">
+                    <h2>ブログを書きましょう</h2>
+                    <form th:action="@{/product/register/process}" method="post" enctype="multipart/form-data">
+                        <div class="register-section-details">
+                            <div class="register-section-details_flex">
+                                <div>標題</div>
+                                <input type="text" name="productName" value="" placeholder="標題を入力してください">
+                            </div>
+                            <div class="register-section-details_flex">
+                                <div>気持ち</div>
+                                <select name="productCategory">
+                                    <option value=""></option>
+                                    <option value="嬉しい">嬉しい</option>
+                                    <option value="楽しい">楽しい</option>
+                                    <option value="怒っている">怒っている</option>
+                                    <option value="驚き">驚き</option>
+                                    <option value="悲しい">悲しい</option>
+                                    <option value="緊張">緊張</option>
+                                </select>
+                            </div>
+                            <div class="register-section-details_flex">
+                                <div>写真のアップロード</div>
+                                <input type="file" name="productImage" placeholder="写真">
+                            </div>
+                            <div class="register-section-details_flex">
+                                <div>何を言いたいか？</div>
+                                <textarea name="productDescription" placeholder="あのね、"></textarea>
+                            </div>
+                        </div>
+                        <div class="register-section-details_flex">
+                            <input type="hidden" name="productId" th:value="${productList.productId}">
+                            <button class="register">更新</button>
+                            <button class="back-btn" onclick="history.back();" type="button">戻る</button>
+                        </div>
+                    </form>
+                    <form th:action="@{/product/delete}" method="post">
+                        <div class="register-section-details_flex">
+                            <input type="hidden" name="productId" value="${productList.productId}">
+                            <button class="register">削除</button>
+                            
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+
+
+        
+        <footer>
+            <div>
+                <small>&copy; 2023 Riuni</small>
+            </div>
+        </footer>
+</body>
+</html>

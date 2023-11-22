@@ -1,0 +1,73 @@
+.background{
+  
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 设置高度为屏幕高度 */
+    background-image: url(/picture.jpg);
+    background-size: cover; /* 使背景图片覆盖整个屏幕 */
+    background-position: center; /* 将背景图片居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    display: flex; /* 使用Flex布局 */
+    position: absolute; /* 使用绝对定位 */
+    top: 0; /* 将图片顶部与父元素顶部对齐 */
+    width: 97.7%;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5); /* 使用 rgba 设置颜色，最后一个参数是透明度（0 到 1 之间） */
+            padding: 20px;
+}
+.logo-h1{
+    font-size: 30px;
+    color: #4c8ccc;
+}
+.logo-img{
+width: 100px; /* 设置图片宽度为100像素，可以根据需要进行调整 */
+height: auto; /* 保持宽高比，自动计算高度 */
+}
+footer {
+    background-color: rgba(255, 255, 255, 0.5); /* 使用 rgba 设置颜色，最后一个参数是透明度（0 到 1 之间） */
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* 固定位置 */
+    bottom: 0; /* 底部对齐 */
+    width: 100%;
+}
+
+.register-section-details_flex{
+    margin-top: 30px;
+}
+.register{
+    margin-right: 30px;
+}
+
+button{
+    display: inline-block;
+    padding: 5px 5px; /* 按钮内边距 */
+    font-size: 25px; /* 按钮文字大小 */
+    text-decoration: none; /* 去除链接的下划线 */
+    border-radius: 5px; /* 圆角大小 */
+    background-color: #182731; /* 按钮背景颜色 */
+    color: #fff; /* 按钮文字颜色 */
+    cursor: pointer; /* 鼠标样式为手型 */
+}
+
+.user-login-ep{
+    font-size: 20px;
+    color: #004891;
+}
+.register-section-details_flex{ 
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+h2{
+    font-size: 50px;
+    color: #182731;
+    margin-bottom: 100px;
+}

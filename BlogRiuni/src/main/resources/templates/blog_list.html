@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SAIL</title>
+	<link rel="stylesheet" th:href="@{/css/login.css}">
+	<link rel="stylesheet" th:href="@{/css/blog_list.css}">
+</head>
+
+<body class="background">
+	<header class="logo">
+		<img src="@{/images/ship.jpg}" alt="" class="logo-img">
+		<h1 class="logo-h1">-wellcome to SAIL-</h1>
+	</header>
+	<main>
+		<article>
+			<section class="register-item">
+				<div class="all-view-register__button">
+					<a th:href="@{/blog/register}" class="btn-radius">ブログを書く</a>
+				</div>
+			</section>
+			<ul class="blogs">
+			    <li th:each="blog:${blogList}">
+			        <a th:href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
+			            <img th:src="@{/blog-img/{blogImage}(blogImage=${blog.blogImage})}" alt="">
+			            <p th:text="${blog.blogTitle}"></p><br>
+			            <p th:text="${blog.article}"></p><br>
+			            <p th:text="${blog.categoryName}"></p>
+			        </a>
+			    </li>
+			</ul>
+		</article>
+		<a th:href="@{/logout}" class="btn-radius">ログアウト</a>
+	</main>
+	<footer>
+		<div>
+			<small>&copy; 2023 Riuni</small>
+		</div>
+	</footer>
+</body>
+
+</html>

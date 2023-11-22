@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SAIL</title>
+        <link rel="stylesheet" href="css/list.css">
+    </head>
+    <body class="background">
+        <header class="logo">
+            <img src="ship.jpg" alt="" class="logo-img">
+            <h1 class="logo-h1">-wellcome to SAIL-</h1>
+        </header>
+        <main>
+            <article>
+                <section class="register-item">
+                    <div class="all-view-register__button">
+                        <a th:href="@{/product/register}" class="btn-radius">ブログを書く</a>
+                    </div>
+                </section>
+                <ul class="products">
+                    <li th:each="product:${productList}">
+                        <a th:href="@{/product/edit/{productId}(productId=${product.productId})}">
+                            <img th:src="@{/product-img/{imagePath}(imagePath=${product.productImage})}" alt="">
+                            <p th:text="${product.productName}"></p><br>
+                            <p th:text="${product.productCategory}"></p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+    
+        </main>
+        <footer>
+            <div>
+                <small>&copy; 2023 Riuni</small>
+            </div>
+        </footer>
+</body>
+</html>
