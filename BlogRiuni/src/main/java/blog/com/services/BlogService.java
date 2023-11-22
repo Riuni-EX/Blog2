@@ -28,4 +28,20 @@ public class BlogService {
 			return blogDao.findByBlogId(blogId);
 		}
 	}
+
+	public boolean saveBlog(Long blogId, String blogTitle, String categoryName, String BlogImage, String article,
+			Long accountId) {
+		if (blogId == null) {
+			if (blogDao.findByBlogTitle(blogTitle) == null) {
+				blogDao.save(new BlogEntity(blogTitle, categoryName, BlogImage, article, accountId));
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			// 更新処理
+			blogDao.save(new BlogEntity(blogId, blogTitle, categoryName, BlogImage, article, accountId));
+			return true;
+		}
+	}
 }

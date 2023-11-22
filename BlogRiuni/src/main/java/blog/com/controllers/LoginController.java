@@ -38,5 +38,9 @@ public class LoginController {
 	    public String showRegisterPage() {
 	        return "account_register";
 	    }
-	
+		@GetMapping("/logout")
+		public String logout() {
+			session.invalidate();
+			return "redirect:/login";
+		}
 }
