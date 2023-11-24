@@ -5,12 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SAIL</title>
-	<link rel="stylesheet" th:href="@{/css/login.css}">
+	<link rel="stylesheet" th:href="@{/css/b_register.css}">
 </head>
 
 <body class="background">
 	<header class="logo">
-		<img src="@{/images/ship.jpg}" alt="" class="logo-img">
+		<img th:src="@{/images/ship.jpg}" alt="" class="logo-img">
 		<h1 class="logo-h1">-wellcome to SAIL-</h1>
 	</header>
 	<main>
@@ -20,11 +20,11 @@
 				<form th:action="@{/blog/save}" method="post" enctype="multipart/form-data">
 					<div class="register-section-details">
 						<div class="register-section-details_flex">
-							<div>標題</div>
+							<div class="register-title">標題</div>
 							<input type="text" name="blogTitle" value="" placeholder="標題を入力してください">
 						</div>
 						<div class="register-section-details_flex">
-							<div>気持ち</div>
+							<div class="register-menu">気持ち</div>
 							<select name="categoryName">
 								<option value="嬉しい">嬉しい</option>
 								<option value="楽しい">楽しい</option>
@@ -35,11 +35,14 @@
 							</select>
 						</div>
 						<div class="register-section-details_flex">
-							<span class="custom-file-input">写真のアップロード</span>
-							<input type="file" id="file" name="blogImage" placeholder="写真のアップロード">
+							<label for="file" class="custom-file-input-label">
+								<span class="custom-file-input-text">写真のアップロード</span>
+								<input type="file" id="file" name="blogImage" style="display: none;"
+									placeholder="写真のアップロード">
+							</label>
 						</div>
 						<div class="register-section-details_flex">
-							<div>何を言いたいか？</div>
+							<div class="register-main">何を言いたいか？</div>
 							<textarea name="article" placeholder="あのね、"></textarea>
 						</div>
 					</div>

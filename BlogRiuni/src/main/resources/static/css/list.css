@@ -1,14 +1,15 @@
 .background{
-  
     margin: 0;
     padding: 0;
     height: 100vh; /* 设置高度为屏幕高度 */
-    background-image: url(/picture.jpg);
+    min-height: 800px;
+    background-image: url(/images/picture.jpg);
     background-size: cover; /* 使背景图片覆盖整个屏幕 */
     background-position: center; /* 将背景图片居中 */
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .logo{
@@ -37,13 +38,6 @@ footer {
     bottom: 0; /* 底部对齐 */
     width: 100%;
 }
-
-.btn-radius {
-    text-decoration: none; /* 去除链接的下划线 */
-    color: #1b70a8; /* 链接文字颜色 */
-    font-size: 50px; /* 链接文字加粗 */
-}
-
 /* ヘッダーに「ブログを書く」ボタンのスタイル */
 .all-view-register__button {
     text-align: left;

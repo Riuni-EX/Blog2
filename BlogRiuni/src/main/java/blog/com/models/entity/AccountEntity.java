@@ -11,22 +11,15 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-//@Data
-//デフォルトの引数なしのコンストラクタを生成します。
-//@NoArgsConstructor
-//全てのフィールドを引数とするコンストラクタを生成します。
-//@AllArgsConstructor
-//@NonNullが付いているフィールドだけを引数とするコンストラクタを生成します。
-
-//JPAエンティティであることを示しています。
-//@Entity
-//@Table(name = "account")
-
 //クラスに対して自動的に生成されるメソッドを提供します
 @Data
+//デフォルトの引数なしのコンストラクタを生成します。
 @NoArgsConstructor
+//全てのフィールドを引数とするコンストラクタを生成します。
 @AllArgsConstructor
+//@NonNullが付いているフィールドだけを引数とするコンストラクタを生成します。
 @RequiredArgsConstructor
+//JPAエンティティであることを示しています。
 @Entity
 //マッピングされるデータベースのテーブルの名前を指定しています。
 @Table(name = "account")

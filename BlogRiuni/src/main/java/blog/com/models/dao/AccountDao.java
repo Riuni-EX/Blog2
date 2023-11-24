@@ -7,14 +7,13 @@ import blog.com.models.entity.AccountEntity;
 
 @Repository
 public interface AccountDao extends JpaRepository<AccountEntity, Long> {
-
-	// 保存処理
+	// アカウントエンティティを保存
 	AccountEntity save(AccountEntity accountEntity);
 
-	// SELECT ＊ FROM account WHERE user_email=?
+	// メールアドレスでアカウントを検索
 	AccountEntity findByUserEmail(String userEmail);
 
-	// SELECT ＊ FROM account WHERE user_email=? AND password = ?
+	// メールアドレスとパスワードでアカウントを検索
 	AccountEntity findByUserEmailAndPassword(String userEmail, String password);
 
 }

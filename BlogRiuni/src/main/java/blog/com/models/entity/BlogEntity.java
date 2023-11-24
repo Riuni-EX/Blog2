@@ -11,24 +11,17 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-//クラスに対して自動的に生成されるメソッドを提供しますs
-//@Data
-//デフォルトの引数なしのコンストラクタを生成します。
-//@NoArgsConstructor
-//全てのフィールドを引数とするコンストラクタを生成します。
-//@AllArgsConstructor
-//@NonNullが付いているフィールドだけを引数とするコンストラクタを生成します。
-
-//JPAエンティティであることを示しています。
-//@Entity
-//マッピングされるデータベースのテーブルの名前を指定しています。
-//@Table(name = "blogs")
-
+//クラスに対して自動的に生成されるメソッドを提供します
 @Data
+//デフォルトの引数なしのコンストラクタを生成します。
 @NoArgsConstructor
+//全てのフィールドを引数とするコンストラクタを生成します。
 @AllArgsConstructor
+//@NonNullが付いているフィールドだけを引数とするコンストラクタを生成します。
 @RequiredArgsConstructor
+//JPAエンティティであることを示しています。
 @Entity
+//マッピングされるデータベースのテーブルの名前を指定しています。
 @Table(name = "blog")
 public class BlogEntity {
 
@@ -38,23 +31,13 @@ public class BlogEntity {
 
 	@NonNull
 	private String blogTitle;
-
+	@NonNull
 	private String categoryName;
-
+	@NonNull
 	private String blogImage;
-
+	@NonNull
 	private String article;
-
+	@NonNull
 	private Long accountId;
 
-	public BlogEntity(@NonNull String blogTitle, String categoryName, String blogImage, String article,
-			Long accountId) {
-		this.blogTitle = blogTitle;
-		this.categoryName = categoryName;
-		this.blogImage = blogImage;
-		this.article = article;
-		this.accountId = accountId;
-	}
-
 }
-

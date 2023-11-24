@@ -8,21 +8,23 @@ import org.springframework.transaction.annotation.Transactional;
 
 import blog.com.models.entity.BlogEntity;
 
-
+//Springによって管理される
 @Repository
+//トランザクションの管理を行う
 @Transactional
 public interface BlogDao extends JpaRepository<BlogEntity, Long> {
-	// save
+	// ブログエンティティを保存
 	BlogEntity save(BlogEntity blogEntity);
 
-	// SELECT * FROM blog
+	// すべてのブログエンティティを取得
 	List<BlogEntity> findAll();
 
-	// SELECT * FROM blog WHERE blog_id=?
+	// ブログIDでブログエンティティを検索
 	BlogEntity findByBlogId(Long blogId);
 
+	// ブログタイトルでブログエンティティを検索
 	BlogEntity findByBlogTitle(String blogTitle);
 
-	// 削除
+	// ブログIDでブログエンティティを削除
 	int deleteByBlogId(Long blogId);
 }

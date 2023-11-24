@@ -1,39 +1,192 @@
-.background{
-  
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* 设置高度为屏幕高度 */
-    background-image: url(/picture.jpg);
-    background-size: cover; /* 使背景图片覆盖整个屏幕 */
-    background-position: center; /* 将背景图片居中 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.background {
+
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	/* 设置高度为屏幕高度 */
+	background-image: url(/images/picture.jpg);
+	background-size: cover;
+	/* 使背景图片覆盖整个屏幕 */
+	background-position: center;
+	/* 将背景图片居中 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.logo{
-    display: flex; /* 使用Flex布局 */
-    position: absolute; /* 使用绝对定位 */
-    top: 0; /* 将图片顶部与父元素顶部对齐 */
-    width: 97.7%;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.5); /* 使用 rgba 设置颜色，最后一个参数是透明度（0 到 1 之间） */
-            padding: 20px;
+.logo {
+	display: flex;
+	/* 使用Flex布局 */
+	position: absolute;
+	/* 使用绝对定位 */
+	top: 0;
+	/* 将图片顶部与父元素顶部对齐 */
+	width: 97.7%;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	/* 使用 rgba 设置颜色，最后一个参数是透明度（0 到 1 之间） */
+	padding: 20px;
 }
 
-.logo-h1{
-        font-size: 30px;
-        color: #4c8ccc;
+.logo-h1 {
+	font-size: 30px;
+	color: #4c8ccc;
 }
-.logo-img{
-    width: 100px; /* 设置图片宽度为100像素，可以根据需要进行调整 */
-    height: auto; /* 保持宽高比，自动计算高度 */
+
+.logo-img {
+	width: 100px;
+	/* 设置图片宽度为100像素，可以根据需要进行调整 */
+	height: auto;
+	/* 保持宽高比，自动计算高度 */
 }
+
 footer {
-    background-color: rgba(255, 255, 255, 0.5); /* 使用 rgba 设置颜色，最后一个参数是透明度（0 到 1 之间） */
-    text-align: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	/* 使用 rgba 设置颜色，最后一个参数是透明度（0 到 1 之间） */
+	text-align: center;
+	padding: 10px;
+	position: fixed;
+	/* 固定位置 */
+	bottom: 0;
+	/* 底部对齐 */
+	width: 100%;
+}
+
+h2 {
+	font-size: 35px;
+	color: #3498db;
+	margin-bottom: 50px;
+}
+
+.register-section-details_flex {
+	display: flex;
+	font-size: 20px;
+	/*justify-content: center;*/
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.register-section-details_flex>div {
+	margin-right: 10px;
+	/* 右边距 */
+}
+
+button {
+	
+    justify-content: space-between; /* 将子元素分散对齐，横向排列 */
+    align-items: center;
+	padding: 5px 5px;
+	/* 按钮内边距 */
+	font-size: 25px;
+	/* 按钮文字大小 */
+	text-decoration: none;
+	/* 去除链接的下划线 */
+	border-radius: 5px;
+	/* 圆角大小 */
+	background-color: #3498db;
+	/* 按钮背景颜色 */
+	color: #fff;
+	/* 按钮文字颜色 */
+	cursor: pointer;
+	/* 鼠标样式为手型 */
+}
+.register{
+	margin-right: 50px;
+}
+
+
+.custom-file-input-label {
+	display: inline-block;
+	flex-direction: column;
+	padding: 10px;
+	border: 1px solid #3498db;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.register-section-details_flex>div {
+	margin-right: 10px;
+	/* 右边距 */
+}
+
+/* 下拉框样式 */
+select {
+	padding: 8px;
+	/* 内边距 */
+	border: 1px solid #ccc;
+	/* 边框样式 */
+	border-radius: 5px;
+	/* 边框圆角 */
+}
+
+/* 去掉下拉框默认样式 */
+select:focus {
+	outline: none;
+}
+
+
+.register-section-details_flex select {
+	width: 150px;
+}
+
+textarea {
+	width: 300px;
+	/* 设置宽度 */
+	height: 150px;
+	/* 设置高度 */
+	padding: 10px;
+	/* 内边距 */
+	border: 1px solid #ccc;
+	/* 边框样式 */
+	border-radius: 5px;
+	/* 边框圆角 */
+	resize: none;
+	/* 禁止调整大小 */
+	vertical-align: top;
+}
+
+/* 去掉文本区域默认样式 */
+textarea:focus {
+	outline: none;
+	border-color: #3498db;
+	/* 获得焦点时的边框颜色 */
+}
+
+.register-title {
+	font-weight: bold;
+	font-size: 25px;
+	color: #004891;
+}
+
+.register-menu {
+	font-weight: bold;
+	font-size: 25px;
+	color: #004891;
+}
+
+.register-main {
+	font-weight: bold;
+	font-size: 25px;
+	color: #004891;
+	vertical-align: top;
+}
+
+.custom-file-input-label {
+    display: inline-block;
     padding: 10px;
-    position: fixed; /* 固定位置 */
-    bottom: 0; /* 底部对齐 */
-    width: 100%;
+    border: 5px solid #3498db;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-file-input-text {
+    font-weight: bold;
+	font-size: 25px;
+    color: #004891;
+    margin-right: 10px; /* 可根据需要调整右边距 */
+}
+
+/* 隐藏原生的文件上传按钮 */
+input[type="file"] {
+    display: none;
 }

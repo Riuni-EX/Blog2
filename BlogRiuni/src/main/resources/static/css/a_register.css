@@ -57,7 +57,7 @@ button{
     font-size: 25px; /* 按钮文字大小 */
     text-decoration: none; /* 去除链接的下划线 */
     border-radius: 5px; /* 圆角大小 */
-    background-color: #182731; /* 按钮背景颜色 */
+    background-color: #004891; /* 按钮背景颜色 */
     color: #fff; /* 按钮文字颜色 */
     cursor: pointer; /* 鼠标样式为手型 */
 }
